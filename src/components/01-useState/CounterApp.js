@@ -3,12 +3,14 @@ import './counter.css';
 
 export const CounterApp = () => {
 
-    const [{ counter1,counter2 }, setCounter] = useState({
+    const [state, setState] = useState({
         counter1:10,
-        counter2:20
+        counter2:20,
+        counter3:30,
+        counter4:40,
     });
+    const { counter1,counter2   } = state;
 
-    console.log(counter1);
     return (
         <>
             <h1>Counter1 { counter1 } </h1>
@@ -18,7 +20,10 @@ export const CounterApp = () => {
             <button 
                 className="btn btn-primary" 
                 onClick={ () => {
-                    setCounter( { counter1:counter1+1 ,counter2} ,  )      
+                    setState({
+                            ...state,
+                            counter1:counter1+1
+                    });      
                 }} 
                 >
 
