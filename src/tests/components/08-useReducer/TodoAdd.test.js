@@ -12,7 +12,7 @@ describe('Pruebas en <TodoAdd/>', () => {
         <TodoAdd
             handleAddTodo={ handleAddTodo }
         />
-    )
+    ) 
 
     test('Debe de mostrarse correctamente', () => {
 
